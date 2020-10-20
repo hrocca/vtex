@@ -37,7 +37,7 @@ class CatalogApi(BaseApi):
         return self.get_result(url)
 
     def get_products_and_sku_id(self, page_size=1000, category_id=1):
-        endpoint = f"/pvt/products/GetProductAndSkuIds?categoryId={category_id}1&_from=1&_to=50"
+        endpoint = f"/pvt/products/GetProductAndSkuIds?categoryId={category_id}&_from=1&_to=50"
         return self._call_api(endpoint)
     
     def get_list_all_skus(self, page=1, page_size=1000):

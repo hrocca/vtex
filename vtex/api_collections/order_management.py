@@ -29,7 +29,9 @@ class OrderManagementApi(BaseApi):
         return self.get_result(url)
 
     def get_list_orders(
-            self, initial_date: datetime = datetime(2000, 1, 1), page: int = 1
+            self, initial_date: datetime = datetime(2000, 1, 1),
+            page: int = 1,
+            end_dt = datetime.today()
     ):
         """
         Given an initial datetime objects and page (by default returns the first page),
@@ -38,7 +40,6 @@ class OrderManagementApi(BaseApi):
         :param page: int
         :return: json dictionary
         """
-        end_dt = datetime.today()
         url = self._build_url(
             f"?f_creationDate=creationDate:["
             f"{initial_date.date()}T00:00:00.000Z TO "

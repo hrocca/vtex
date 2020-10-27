@@ -21,9 +21,9 @@ class MasterDataApi(BaseApi):
         url = self._build_url(endpoint)
         return self.get_result(url)
 
-    def get_clients_scroll(self):
+    def get_clients_scroll(self, start_date, end_date):
         self.acronym = 'CL'
-        url = self._scroll_url() + "?_size=1000"
+        url = self._scroll_url() + f"?_fields=email,id,createdIn&_size=1000&_where=createdIn between {start_date} AND {end_date}"
         result = self.get_result(url)
         return result
 

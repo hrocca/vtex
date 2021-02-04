@@ -63,7 +63,7 @@ class Vtex:
         self.payments_gateway = PaymentsGatewayApi(cfg)
         self.order_management = OrderManagementApi(cfg)
         self.master_data = MasterDataApi(cfg)
-        self.licence_manager = LicenseManagerApi(cfg)
+        self.license_manager = LicenseManagerApi(cfg)
 
     def _get_header(self):
         """

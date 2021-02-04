@@ -1,7 +1,7 @@
 from .base_api import BaseApi
 
 
-class LicenceManagerApi(BaseApi):
+class LicenseManagerApi(BaseApi):
     def _build_url(self, endpoint):
         midpoint = "/api/vlm/account/stores"
         url = self.base_url + midpoint + endpoint

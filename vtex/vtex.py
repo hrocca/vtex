@@ -14,6 +14,7 @@ from .api_collections import (
     PaymentsGatewayApi,
     OrderManagementApi,
     MasterDataApi,
+    LicenceManagerApi
 )
 
 DEFAULT_TIMEOUT = 60.0
@@ -62,6 +63,7 @@ class Vtex:
         self.payments_gateway = PaymentsGatewayApi(cfg)
         self.order_management = OrderManagementApi(cfg)
         self.master_data = MasterDataApi(cfg)
+        self.logistig_master = LicenceManagerApi(cfg)
 
     def _get_header(self):
         """
